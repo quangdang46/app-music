@@ -471,7 +471,7 @@ const handlePlay = () => {
     activeNameByIndex();
 
     setInterval(() => {
-      renderTime(song.duration, song.currentTime);
+      renderTime(song?.duration, song.currentTime);
       // displayTime();
       if (song.ended) {
         setIconPlay("player-play fa-solid fa-play");
