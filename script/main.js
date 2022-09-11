@@ -527,21 +527,23 @@ window.addEventListener("load", () => {
   ) {
     // check one touch in mobile
     let touchTime = 0;
-    musicLists.forEach((item) => {
-      item.addEventListener("touchend", (e) => {
-        touchTime++;
-        if (touchTime === 1) {
-          setTimeout(() => {
-            if (touchTime === 1) {
-              handleClick(e);
-            } else {
-              handleDoubleClick(e);
-            }
-            touchTime = 0;
-          }, 300);
-        }
+    musicLists &&
+      musicLists.length > 0 &&
+      musicLists.forEach((item) => {
+        item.addEventListener("touchend", (e) => {
+          touchTime++;
+          if (touchTime === 1) {
+            setTimeout(() => {
+              if (touchTime === 1) {
+                handleClick(e);
+              } else {
+                handleDoubleClick(e);
+              }
+              touchTime = 0;
+            }, 300);
+          }
+        });
       });
-    });
 
     // musicLists &&
     //   musicLists.length > 0 &&
@@ -575,8 +577,6 @@ window.addEventListener("load", () => {
     //       }
     //     });
     //   });
-
-    
   } else {
     musicLists &&
       musicLists.length > 0 &&
