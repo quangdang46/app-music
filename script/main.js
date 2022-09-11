@@ -246,7 +246,7 @@ const convertDuration = (timeDuration) => {
 };
 
 const renderTime = (timeDuration, timeCurrent) => {
-  $(".player-duration").textContent = convertTime(timeDuration);
+  $(".player-duration").textContent = convertTime(timeDuration || "00:00");
   $(".player-remaining").textContent = convertTime(timeCurrent);
   //
   const progress = $("#progress-bar");
