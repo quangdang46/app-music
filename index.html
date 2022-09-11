@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+    <link rel="shortcut icon" href="./icon.jpg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/app.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="app-header">
+        <div class="music-avatar">
+          <img
+            src="https://images.unsplash.com/photo-1662441900023-2169f8f26023?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+            alt=""
+            id="avatar"
+          />
+        </div>
+        <div class="music-info">
+          <p class="music-info-type">single</p>
+          <p class="music-info-name music-name--huge">Anh Sẽ Đợi</p>
+          <div class="music-info-author">
+            <!-- <span>Quinnn</span> -->
+
+            <span class="music-info-time">2 min 26 sec</span>
+          </div>
+        </div>
+      </div>
+      <div class="app-body">
+        <div class="app-action">
+          <div class="music-play main-button" id="play-button">
+            <i class="fa fa-play player-play"></i>
+          </div>
+          <div class="music-heart">
+            <i class="fa-regular fa-heart"></i>
+            <!-- <i class="fa-solid fa-heart heart-active"></i> -->
+          </div>
+        </div>
+
+        <div class="music-list-head">
+          <p class="music-number-main">#</p>
+          <p class="music-name-main">TIÊU ĐỀ</p>
+          <p class="music-time-main">
+            <i class="fa-regular fa-clock"></i>
+          </p>
+        </div>
+
+        <div class="music-list">
+          <!-- <div class="music-item">
+            <p class="music-number">
+              <span class="active">1</span>
+              <i class="fa fa-play active"></i>
+            </p>
+            <div class="music-name">
+              <span> Anh Sẽ Đợi </span>
+              <span class="author">Quinnn,Quinnn,Quinnn</span>
+            </div>
+            <p class="music-time">2:26</p>
+          </div> -->
+        </div>
+      </div>
+      <div class="app-footer">
+        <div class="music-media">
+          <div class="music-media-avatar">
+            <img src="https://source.unsplash.com/random" alt="" id="avatar" />
+          </div>
+          <div class="music-media-info">
+            <p class="music-media-name">Anh Sẽ Đợi</p>
+            <div class="music-media-author">
+              <!-- <span>Quinnn</span> -->
+            </div>
+          </div>
+        </div>
+        <div class="music-box">
+          <div class="player-tool">
+            <i class="fa-solid fa-backward-step player-prev"></i>
+            <div class="play-button" id="play-button">
+              <i class="fa fa-play player-play"></i>
+            </div>
+            <i class="fa-solid fa-forward-step player-next"></i>
+          </div>
+          <div class="music-timeline">
+            <span class="player-remaining">0:00</span>
+            <div class="progress">
+              <input
+                type="range"
+                id="progress-bar"
+                min="0"
+                max=""
+                value="0"
+                class="bar"
+              />
+              <audio src="./musics/amee/nangtho.mp3" id="song"></audio>
+            </div>
+            <span class="player-duration">0:00</span>
+          </div>
+        </div>
+        <div class="volume">
+          <div class="volume-icon">
+            <i class="bx bx-volume-full"></i>
+          </div>
+          <input
+            type="range"
+            name=""
+            id="volume-bar"
+            max="100"
+            min="0"
+            value="100"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="./script/main.js"></script>
+  </body>
+</html>
