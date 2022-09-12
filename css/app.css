@@ -251,16 +251,17 @@ i.heart-active {
 } */
 .sticky {
   position: fixed;
-  
   top: 0;
   left: 0;
   right: 0;
   z-index: 2;
+  animation: all 0.25s linear infinite;
 }
 .sticky .app-action {
   background-color: #361a1a;
   padding: 20px;
   opacity: 1;
+  /* animation: 0.75s; */
 }
 .sticky .music-list-head {
   padding: 10px 30px;
@@ -268,6 +269,7 @@ i.heart-active {
   background-color: #121212;
   opacity: 1;
   border-bottom: 0;
+  /* animation: 0.75s; */
 }
 
 #container {
