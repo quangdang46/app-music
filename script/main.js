@@ -246,7 +246,9 @@ const convertDuration = (timeDuration) => {
 };
 
 const renderTime = (timeDuration, timeCurrent) => {
-  $(".player-duration").textContent =timeDuration? convertTime(timeDuration):"0:00";
+  $(".player-duration").textContent = timeDuration
+    ? convertTime(timeDuration)
+    : "0:00";
   $(".player-remaining").textContent = convertTime(timeCurrent);
   //
   const progress = $("#progress-bar");
@@ -508,6 +510,32 @@ const handleVolume = (e) => {
     $(".volume-icon").innerHTML = `<i class='bx bx-volume-full' ></i>`;
   }
 };
+function findOffset(element) {
+  var top = 0,
+    left = 0;
+
+  do {
+    top += element.offsetTop || 0;
+    left += element.offsetLeft || 0;
+    element = element.offsetParent;
+  } while (element);
+
+  return {
+    top: top,
+    left: left,
+  };
+}
+const handleSticky = () => {
+  const navbar = $(".scroll");
+  const navbarOffset = findOffset(navbar);
+  const bodyScrollTop =
+    document.documentElement.scrollTop || document.body.scrollTop;
+  if (bodyScrollTop > navbarOffset.top) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+};
 window.addEventListener("load", () => {
   // const progress = $("#progress-bar");
 
@@ -616,4 +644,6 @@ window.addEventListener("load", () => {
   });
   // handle change volume
   $("#volume-bar").addEventListener("input", handleVolume);
+  // event scroll
+  window.addEventListener("scroll", handleSticky);
 });

@@ -1,3 +1,7 @@
+* {
+  touch-action: manipulation;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -108,10 +112,6 @@ i.heart-active {
 .music-item:hover {
   background-color: hsla(0, 0%, 100%, 0.1);
 }
-.music-list {
-  max-height: 50vh;
-  overflow-y: auto;
-}
 
 .music-list::-webkit-scrollbar {
   width: 5px;
@@ -165,11 +165,11 @@ i.heart-active {
   justify-content: space-between;
   padding: 16px;
   line-height: 26px;
-  /* 
+
   position: fixed;
   bottom: 0;
   left: 0;
-  right: 0; */
+  right: 0;
 }
 .music-media {
   display: flex;
@@ -245,6 +245,29 @@ i.heart-active {
 .music-item:hover i.active,
 .music-item span.active {
   display: inline-block;
+}
+/* .scroll {
+  background-color: red;
+} */
+.sticky {
+  position: fixed;
+  
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.sticky .app-action {
+  background-color: #361a1a;
+  padding: 20px;
+  opacity: 1;
+}
+.sticky .music-list-head {
+  padding: 10px 30px;
+  margin-top: 0;
+  background-color: #121212;
+  opacity: 1;
+  border-bottom: 0;
 }
 
 #container {
