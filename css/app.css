@@ -112,7 +112,9 @@ i.heart-active {
 .music-item:hover {
   background-color: hsla(0, 0%, 100%, 0.1);
 }
-
+.music-item:last-child {
+  margin-bottom: 200px;
+}
 .music-list::-webkit-scrollbar {
   width: 5px;
 }
