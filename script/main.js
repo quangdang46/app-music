@@ -611,9 +611,6 @@ $(".loading").insertAdjacentHTML("beforebegin", loadingTemplate);
 window.addEventListener("load", () => {
   $(".not-loading").parentNode.removeChild($(".not-loading"));
   $(".loading").classList.remove("hidden");
-
-
-
   // render data
   firstRenderLocal();
   renderListsMusic();
