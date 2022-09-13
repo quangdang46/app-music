@@ -572,7 +572,6 @@ const loadingTemplate = `
           <div class="music-item skeleton"></div>
           <div class="music-item skeleton"></div>
           <div class="music-item skeleton"></div>
-          <div class="music-item skeleton"></div>
 
 
         </div>
