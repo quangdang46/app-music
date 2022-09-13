@@ -9,7 +9,6 @@ body {
   /* width: 1200px; */
   color: white;
   margin: 0 auto;
-  height: 100vh;
 }
 .app-header {
   display: flex;
@@ -335,13 +334,19 @@ i.heart-active {
     background: bule;
   }
 }
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+
 .skeleton {
   background-color: #eee;
   background-image: linear-gradient(
     110deg,
-    #ececec 8%,
-    #f5f5f5 18%,
-    #ececec 33%
+    #ececec 10%,
+    #f5f5f5 20%,
+    #ececec 30%
   );
   background-size: 200% 100%;
   animation: 1.5s shine linear infinite;
@@ -360,7 +365,56 @@ i.heart-active {
   font-size: 25px;
   margin-right: 30px;
 }
+.app.skeleton {
+  position: relative;
+  z-index: 9999;
+}
+.music-info.skeleton {
+  width: 500px;
+}
+.music-heart.skeleton {
+  width: 60px;
+  height: 60px;
+}
+.music-number-main.skeleton {
+  width: 80px;
+  height: 50px;
+}
+.music-name-main.skeleton {
+  width: 200px;
+  height: 50px;
+}
 
+.music-time-main.skeleton {
+  width: 50px;
+  height: 50px;
+}
+.music-item.skeleton {
+  height: 80px;
+}
+.music-item.skeleton:last-child {
+  margin-bottom: 0;
+}
+.app-footer.skeleton {
+  position: unset;
+}
+.music-media-name.skeleton {
+  width: 100px;
+  height: 20px;
+}
+.music-media-author.skeleton {
+  width: 200px;
+  height: 20px;
+}
+.player-remaining.skeleton,
+.player-duration.skeleton {
+  width: 30px;
+  height: 30px;
+}
+.volume-icon.skeleton {
+  width: 20px;
+  height: 20px;
+}
 @media screen and (max-width: 1199px) {
   .music-info-name {
     font-size: 65px;

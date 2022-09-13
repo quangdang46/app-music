@@ -2,7 +2,7 @@ $ = document.querySelector.bind(document);
 $$ = document.querySelectorAll.bind(document);
 let isPlaying = false;
 let songIndex = 0;
-var data = [
+const data = [
   {
     key: 1,
     name: "Anh sai rồi",
@@ -536,8 +536,83 @@ const handleSticky = () => {
     navbar.classList.remove("sticky");
   }
 };
+
+const loadingTemplate = `
+<div class="app skeleton not-loading">
+      <div class="app-header skeleton">
+        <div class="music-avatar skeleton"></div>
+        <div class="music-info skeleton">
+          <p class="music-info-type skeleton"></p>
+          <p class="music-info-name skeleton"></p>
+          <div class="music-info-author skeleton">
+            <!-- <span>Quinnn</span> -->
+
+            <span class="music-info-time skeleton"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-body skeleton">
+        <div class="scroll skeleton">
+          <div class="app-action skeleton">
+            <div class="music-play skeleton" id="play-button"></div>
+            <div class="music-heart skeleton">
+            </div>
+          </div>
+          <div class="music-list-head skeleton">
+            <p class="music-number-main skeleton"></p>
+            <p class="music-name-main skeleton"></p>
+            <p class="music-time-main skeleton"></p>
+          </div>
+        </div>
+
+        <div class="music-list skeleton">
+          <div class="music-item skeleton"></div>
+          <div class="music-item skeleton"></div>
+          <div class="music-item skeleton"></div>
+          <div class="music-item skeleton"></div>
+          <div class="music-item skeleton"></div>
+          <div class="music-item skeleton"></div>
+
+
+        </div>
+      </div>
+      <div class="app-footer skeleton">
+        <div class="music-media skeleton">
+          <div class="music-media-avatar skeleton"></div>
+          <div class="music-media-info">
+            <p class="music-media-name skeleton"></p>
+            <div class="music-media-author skeleton">
+              <!-- <span>Quinnn</span> -->
+            </div>
+          </div>
+        </div>
+        <div class="music-box skeleton">
+          <div class="player-tool skeleton">
+            <div class="player-prev skeleton"></div>
+            <div class="play-button skeleton" id="play-button"></div>
+            <div class="player-next skeleton"></div>
+
+          </div>
+          <div class="music-timeline skeleton">
+            <span class="player-remaining skeleton"></span>
+            <div class="progress skeleton"></div>
+            <span class="player-duration skeleton"></span>
+          </div>
+        </div>
+        <div class="volume skeleton">
+          <div class="volume-icon skeleton"></div>
+        </div>
+      </div>
+    </div>
+`;
+
+$(".loading").insertAdjacentHTML("beforebegin", loadingTemplate);
 window.addEventListener("load", () => {
-  // const progress = $("#progress-bar");
+  $(".not-loading").parentNode.removeChild($(".not-loading"));
+  $(".loading").classList.remove("hidden");
+
+
 
   // render data
   firstRenderLocal();
