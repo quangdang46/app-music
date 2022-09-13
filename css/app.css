@@ -368,7 +368,9 @@ i.heart-active {
   z-index: 9999;
   height: 100vh;
 }
-
+.app-body.skeleton{
+  padding-bottom: 0;
+}
 .music-info.skeleton {
   width: 500px;
 }
